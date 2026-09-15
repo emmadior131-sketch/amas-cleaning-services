@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAS Cleaning Services</title>
+    <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f7f5fa;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .logo {
+        width: 180px;
+        max-width: 80%;
+        height: auto;
+        display: block;
+        margin: 25px auto;
+    }
+
+    h1, h2, h3 {
+        color: #6a1b9a;
+    }
+
+    section {
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    nav {
+    background: #6a1b9a;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+#home {
+    background: white;
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+#home h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#home p {
+    margin: 15px 0;
+}
+
+#home a {
+    display: inline-block;
+    background: #6a1b9a;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#home a:hover {
+    background: #4a116d;
+}
+#services > div {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+#services > div:hover {
+    transform: translateY(-5px);
+}
+
+#services h3 {
+    margin-bottom: 10px;
+}
+
+#services p {
+    color: #555;
+}
+#projects > div {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+#projects h3 {
+    margin-bottom: 10px;
+}
+
+#projects p {
+    color: #555;
+}
+#why-us > div {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+#why-us h3 {
+    margin-bottom: 10px;
+}
+
+#why-us p {
+    color: #555;
+}
+#about {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+#about p {
+    max-width: 850px;
+    margin: 15px auto;
+    color: #555;
+}
+
+#about h3 {
+    margin-top: 25px;
+}
+#jobs {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+#jobs ul {
+    list-style-position: inside;
+    margin: 20px 0;
+}
+
+#jobs li {
+    margin: 8px 0;
+}
+
+#jobs a {
+    display: inline-block;
+    background: #6a1b9a;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#jobs a:hover {
+    background: #4a116d;
+}
+#contact {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+#contact p {
+    margin: 12px 0;
+}
+
+#contact a {
+    display: inline-block;
+    background: #6a1b9a;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#contact a:hover {
+    background: #4a116d;
+}
+@media (max-width: 600px) {
+    .menu-toggle {
+    display: block;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+}
+
+.nav-links a {
+    display: block;
+    margin: 10px 0;
+}
+
+    nav {
+        padding: 10px 5px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 7px;
+        font-size: 14px;
+    }
+
+    section {
+        margin: 25px 10px;
+        padding: 25px 15px;
+    }
+
+    #home h1 {
+        font-size: 30px;
+    }
+
+    #home {
+        padding: 45px 15px;
+    }
+
+    #services > div,
+    #projects > div,
+    #why-us > div {
+        padding: 20px 15px;
+    }
+}
+footer {
+    background: #6a1b9a;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 50px;
+}
+
+footer h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+#job-application {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+#job-application form {
+    max-width: 600px;
+    margin: 25px auto 0;
+}
+
+#job-application input,
+#job-application select,
+#job-application textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+#job-application textarea {
+    resize: vertical;
+}
+
+#job-application button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 10px;
+    background: #6a1b9a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#job-application button:hover {
+    background: #4a116d;
+}
+</style>
+</head>
+
+<body>
+
+    <img class="logo"
+     src="WhatsApp Image 2026-09-13 at 8.34.31 PM.jpeg"
+     alt="AMAS Cleaning Services Logo">
+
+    <nav>
+    <button class="menu-toggle">☰</button>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About Us</a>
+        <a href="#jobs">Jobs</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+    <section id="home">
+    <h1>AMAS CLEANING SERVICES</h1>
+
+    <p>Our Reputation Is Spotless</p>
+
+    <p>
+        Professional cleaning services you can trust.
+        We provide reliable cleaning, fumigation,
+        washing and maintenance services in Enugu.
+    </p>
+
+    <a href="#contact">Book a Service</a>
+</section>
+     <section id="services">
+    <h2>Our Services</h2>
+
+    <div>
+        <h3>AMAS Cleaning Services</h3>
+        <p>House cleaning, deep cleaning, commercial cleaning and post-construction cleaning.</p>
+    </div>
+
+    <div>
+        <h3>AMAS Fumigation Services</h3>
+        <p>Professional fumigation and pest control, including bedbug treatment.</p>
+    </div>
+
+    <div>
+        <h3>AMAS Sofa & Rug Washing</h3>
+        <p>Professional sofa, upholstery and rug washing services.</p>
+    </div>
+
+    <div>
+        <h3>AMAS Compounds & Pool Washing</h3>
+        <p>Compound, pool, brick and interlock washing services.</p>
+    </div>
+</section>
+    <section id="projects">
+    <h2>Our Cleaning Projects</h2>
+
+    <div>
+        <h3>House Cleaning Projects</h3>
+        <p>
+            We provide professional cleaning services for homes,
+            apartments and residential properties.
+        </p>
+    </div>
+
+    <div>
+        <h3>Commercial Cleaning Projects</h3>
+        <p>
+            We clean offices, businesses and other commercial
+            spaces to maintain a clean and professional environment.
+        </p>
+    </div>
+
+    <div>
+        <h3>Post-Construction Cleaning</h3>
+        <p>
+            We remove dust, dirt, debris and construction residue
+            to prepare newly completed properties for use.
+        </p>
+    </div>
+</section>
+    <section id="why-us">
+    <h2>Why Choose AMAS?</h2>
+
+    <div>
+        <h3>Nearly 10 Years of Experience</h3>
+        <p>
+            With nearly a decade of experience, AMAS Cleaning Services
+            has built practical expertise in delivering dependable
+            cleaning, washing, fumigation and maintenance solutions.
+        </p>
+    </div>
+
+    <div>
+        <h3>50+ Cleaning Professionals</h3>
+        <p>
+            Our team of over 50 workers gives us the capacity to handle
+            both individual cleaning jobs and larger residential,
+            commercial and specialized projects.
+        </p>
+    </div>
+
+    <div>
+        <h3>Our Reputation Is Spotless</h3>
+        <p>
+            We are committed to professional service, attention to
+            detail and customer satisfaction on every project.
+        </p>
+    </div>
+</section>
+     <section id="about">
+    <h2>About AMAS Cleaning Services</h2>
+
+    <p>
+        AMAS Cleaning Services is a professional cleaning and
+        maintenance company committed to delivering reliable,
+        quality and dependable services to homes, businesses
+        and organizations.
+    </p>
+
+    <p>
+        With nearly 10 years of experience, we have developed
+        the skills and practical expertise needed to handle
+        residential, commercial and specialized cleaning projects.
+    </p>
+
+    <p>
+        Our team of over 50 cleaning professionals gives us
+        the capacity to take on projects of different sizes
+        while maintaining our commitment to quality service.
+    </p>
+
+    <h3>Our Motto</h3>
+    <p><strong>"Our Reputation Is Spotless"</strong></p>
+</section>
+     <section id="jobs">
+    <h2>Jobs & Career Opportunities</h2>
+
+    <p>
+        AMAS Cleaning Services provides employment opportunities
+        for hardworking and reliable individuals who want to build
+        a career in the cleaning and facility management industry.
+    </p>
+
+    <h3>Available Opportunities</h3>
+
+    <ul>
+        <li>House Cleaning Jobs</li>
+        <li>Commercial Cleaning Jobs</li>
+        <li>Cleaning Staff</li>
+        <li>Cleaning Supervisors</li>
+        <li>Fumigation & Pest Control Workers</li>
+    </ul>
+
+    <h3>Staff Training</h3>
+    <p>
+        We also provide recruitment and training opportunities
+        for individuals interested in professional cleaning services.
+    </p>
+
+    <a href="#job-application">Apply for a Job</a>
+</section>
+    <section id="contact">
+    <h2>Contact AMAS Cleaning Services</h2>
+
+    <p>
+        Ready to book a cleaning service or request a quotation?
+        Contact us today.
+    </p>
+
+    <p><strong>📍 Address:</strong> 105 Chime Avenue, New Haven, Enugu</p>
+
+    <p><strong>📞 Phone:</strong> 0810 089 2042</p>
+
+    <p><strong>📱 WhatsApp:</strong> 0810 089 2042</p>
+
+    <p><strong>📧 Email:</strong> Coming soon</p>
+
+    <h3>Follow AMAS</h3>
+
+    <p>
+        TikTok: @enugucleaningservices
+    </p>
+
+    <p>
+        Instagram: @amas__cleaning_services
+    </p>
+
+    <p>
+        Facebook: AMAS Cleaning Services
+    </p>
+
+    <a href="https://wa.me/2348100892042">
+        Book a Service on WhatsApp
+    </a>
+</section>
+   <section id="job-application">
+    <h2>Job Application</h2>
+
+    <p>
+        Interested in working with AMAS Cleaning Services?
+        Fill out the form below and our team will contact you.
+    </p>
+
+    <form onsubmit="sendApplication(event)">
+        <input type="text" placeholder="Full Name" required>
+
+        <input type="tel" placeholder="Phone Number" required>
+
+        <input type="text" placeholder="Location" required>
+
+        <select required>
+            <option value="">Select Position</option>
+            <option>House Cleaning Staff</option>
+            <option>Commercial Cleaning Staff</option>
+            <option>Cleaning Supervisor</option>
+            <option>Fumigation & Pest Control Worker</option>
+        </select>
+
+        <textarea placeholder="Tell us about yourself and your experience" rows="5"></textarea>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</section>
+<footer>
+    <h3>AMAS Cleaning Services</h3>
+    <p>Our Reputation Is Spotless</p>
+    <p>© 2026 AMAS Cleaning Services. All Rights Reserved.</p>
+</footer>
+    <script>
+function sendApplication(event) {
+    event.preventDefault();
+
+    const form = event.target;
+
+    const name = form.querySelector('input[type="text"]').value;
+    const phone = form.querySelector('input[type="tel"]').value;
+    const location = form.querySelectorAll('input[type="text"]')[1].value;
+    const position = form.querySelector('select').value;
+    const experience = form.querySelector('textarea').value;
+
+    const message =
+        "Hello AMAS Cleaning Services,\n\n" +
+        "I would like to apply for a job.\n\n" +
+        "JOB APPLICATION\n" +
+        "Full Name: " + name + "\n" +
+        "Phone Number: " + phone + "\n" +
+        "Location: " + location + "\n" +
+        "Position: " + position + "\n" +
+        "Experience: " + experience + "\n\n" +
+        "Thank you.";
+
+    const whatsappURL =
+        "https://wa.me/2348100892042?text=" +
+        encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+}
+</script>
+   <script>
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", function() {
+    if (navLinks.style.display === "flex") {
+        navLinks.style.display = "none";
+    } else {
+        navLinks.style.display = "flex";
+    }
+});
+</script>
+</body>
+</html>
