@@ -38,8 +38,7 @@
     }
     nav {
     background: #6a1b9a;
-    padding: 15px;
-    text-align: center;
+    padding: 12px 15px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -50,10 +49,11 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #f1e6f7
 }
 .menu-toggle {
     display: none;
@@ -69,74 +69,7 @@ nav a:hover {
     color: #6a1b9a;
     margin: 10px 0 20px;
 }
-#home {
-    background: white;
-    padding: 60px 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
 
-#home h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-#home p {
-    margin: 15px 0;
-}
-.trust-text {
-    font-size: 15px;
-    color: #666;
-    font-style: italic;
-    max-width: 650px;
-    margin: 10px auto;
-}
-
-#home a {
-    display: inline-block;
-    background: #6a1b9a;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 15px;
-}
-.trust-stats {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 30px auto 10px;
-    max-width: 800px;
-}
-.trust-stats div {
-    flex: 1;
-    background: #f7f5fa;
-    padding: 20px 15px;
-    border-radius: 12px;
-    border: 1px solid #eee;
-}
-.trust-stats strong {
-    display: block;
-    color: #6a1b9a;
-    font-size: 28px;
-    margin-botton: 5px;
-}
-.trust-stats span {
-    display: block;
-    color: #555;
-    font-size: 14px
-}
-#home a:hover {
-    background: #4a116d;
-}
-#home a:nth-of-type(2) {
-    background: #25D366;
-    margin-left: 10px;
-}
-#home a:nth-of-type(2):hover {
-    background: #1da851;
-}
 #services > div {
     background: white;
     padding: 25px;
@@ -273,17 +206,27 @@ nav a:hover {
 @media (max-width: 600px) {
     .menu-toggle {
     display: block;
-    margin: 0 auto;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 8px 15px;
 }
 
 .nav-links {
     display: none;
     flex-direction: column;
+    width: 100%;
+    background: #6a1b9a;
+    padding: 10px 0;
 }
 
 .nav-links a {
-    display: block;
-    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    border-top: 1px solid rgba(255,255,255,.15);
 }
 
     nav {
@@ -309,6 +252,9 @@ nav a:hover {
     }
     .tust-stats div {
         width: 100%
+    }
+    #services {
+        grid-template-columns: 1fr;
     }
     #home h1 {
         font-size: 30px;
@@ -422,10 +368,1077 @@ input[type="file"] {
     font-weight: bold;
     color: #6a1b9a;
 }
+/* PREMIUM HOMEPAGE */
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background:
+        linear-gradient(rgba(106, 27, 154, 0.88), rgba(74, 20, 110, 0.92)),
+        url("WhatsApp Image 2026-09-13 at 8.34.31 PM.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero-tag {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    opacity: 0.9;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.hero-content > p:not(.hero-tag) {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: white;
+    color: #6a1b9a;
+}
+
+.secondary-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 55px;
+    flex-wrap: wrap;
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stats strong {
+    font-size: 32px;
+}
+
+.hero-stats span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 700px;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero-content > p:not(.hero-tag) {
+        font-size: 16px;
+    }
+
+    .hero-stats {
+        gap: 25px;
+    }
+}
+/* PREMIUM SERVICE CARDS */
+
+.service-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(106, 27, 154, 0.18);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #f1e6f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.service-card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    margin-bottom: 20px;
+}
+
+.service-card a {
+    display: inline-block;
+    background: #6a1b9a;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.service-card a:hover {
+    background: #4a116d;
+    transform: translateY(-2px);
+}
+/* PREMIUM PROJECT CARDS */
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#projects h2 {
+    grid-column: 1 / -1;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.project-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+    transition: 0.3s ease;
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(106, 27, 154, 0.18);
+}
+
+.project-number {
+    font-size: 38px;
+    font-weight: bold;
+    color: #6a1b9a;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.project-card a {
+    display: inline-block;
+    background: #6a1b9a;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.project-card a:hover {
+    background: #4a116d;
+}
+
+@media (max-width: 800px) {
+    #projects {
+        grid-template-columns: 1fr;
+    }
+}
+/* TESTIMONIALS */
+
+#testimonials {
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.testimonials-intro {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #666;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+    transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(106, 27, 154, 0.16);
+}
+
+.stars {
+    color: #f5b301;
+    font-size: 22px;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+}
+
+.testimonial-card p {
+    color: #555;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-card h3 {
+    margin-bottom: 3px;
+}
+
+.testimonial-card span {
+    color: #777;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* WHY CHOOSE AMAS */
+
+#why-us {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#why-us h2 {
+    grid-column: 1 / -1;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.why-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+    transition: 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(106, 27, 154, 0.18);
+}
+
+.why-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #f1e6f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.why-card h3 {
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    color: #555;
+}
+
+@media (max-width: 800px) {
+    #why-us {
+        grid-template-columns: 1fr;
+    }
+}
+/* ABOUT SECTION */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.about-text {
+    text-align: left;
+}
+
+.about-text p {
+    color: #555;
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+
+.about-highlight {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.about-highlight div {
+    background: #f7f5fa;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #6a1b9a;
+}
+
+.about-highlight strong {
+    display: block;
+    color: #6a1b9a;
+    font-size: 30px;
+}
+
+.about-highlight span {
+    color: #555;
+    font-size: 14px;
+}
+
+.about-motto {
+    margin-top: 35px;
+    padding: 25px;
+    background: #6a1b9a;
+    border-radius: 15px;
+    color: white;
+}
+
+.about-motto span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    opacity: 0.85;
+}
+
+.about-motto strong {
+    font-size: 24px;
+}
+
+@media (max-width: 700px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+/* JOBS SECTION */
+
+.jobs-intro {
+    max-width: 700px;
+    margin: 10px auto 30px;
+    color: #555;
+}
+
+.job-opportunities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.job-card {
+    background: #f7f5fa;
+    padding: 25px 20px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-6px);
+    background: #f1e6f7;
+}
+
+.job-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.job-card h3 {
+    margin-bottom: 8px;
+}
+
+.job-card p {
+    color: #555;
+}
+
+.job-training {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #f7f5fa;
+    border-radius: 15px;
+}
+
+.job-training h3 {
+    margin-bottom: 10px;
+}
+
+.job-training p {
+    color: #555;
+}
+
+.job-apply-btn {
+    display: inline-block;
+    background: #6a1b9a;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.job-apply-btn:hover {
+    background: #4a116d;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 700px) {
+    .job-opportunities {
+        grid-template-columns: 1fr;
+    }
+}
+/* CONTACT SECTION */
+
+.contact-intro {
+    max-width: 650px;
+    margin: 10px auto 30px;
+    color: #555;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.contact-card {
+    background: #f7f5fa;
+    padding: 25px 20px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    background: #f1e6f7;
+}
+
+.contact-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contact-card h3 {
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: #555;
+}
+
+.contact-social {
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 600px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.contact-social h3 {
+    margin-bottom: 15px;
+}
+
+.contact-social p {
+    margin: 7px 0;
+    color: #555;
+}
+
+.contact-action {
+    margin-top: 30px;
+    padding: 35px 25px;
+    background: #6a1b9a;
+    color: white;
+    border-radius: 18px;
+}
+
+.contact-action h3 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.contact-action p {
+    margin-bottom: 20px;
+}
+
+.contact-action a {
+    display: inline-block;
+    background: white;
+    color: #6a1b9a;
+    padding: 13px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.contact-action a:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 700px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* JOB APPLICATION */
+
+#job-application {
+    text-align: center;
+}
+
+.application-intro {
+    max-width: 700px;
+    margin: 10px auto 30px;
+    color: #555;
+}
+
+.application-box {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.application-info {
+    background: #6a1b9a;
+    color: white;
+    padding: 35px 30px;
+    border-radius: 18px;
+}
+
+.application-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.application-info h3 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.application-info p {
+    line-height: 1.7;
+}
+
+.application-points {
+    margin-top: 25px;
+}
+
+.application-points p {
+    margin: 10px 0;
+}
+
+#job-application form {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+#job-application input,
+#job-application select,
+#job-application textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+#job-application textarea {
+    resize: vertical;
+}
+
+#job-application label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.cv-note {
+    display: block;
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+#job-application button {
+    width: 100%;
+    border: none;
+    background: #6a1b9a;
+    color: white;
+    padding: 14px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+#job-application button:hover {
+    background: #4a116d;
+    transform: translateY(-2px);
+}
+
+#application-message {
+    margin-top: 15px;
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+@media(max-width:800px) {
+
+    .application-box {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* GALLERY */
+
+#gallery {
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.gallery-intro {
+    max-width: 700px;
+    margin: 10px auto 30px;
+    color: #555;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    border: 1px solid #eee;
+    transition: .3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(106,27,154,.18);
+}
+
+.gallery-placeholder {
+    height: 220px;
+    background: linear-gradient(
+        135deg,
+        #6a1b9a,
+        #9c4dcc
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+    color: white;
+}
+
+.gallery-item h3 {
+    margin: 18px 15px 8px;
+    font-size: 20px;
+}
+
+.gallery-item p {
+    color: #666;
+    margin: 0 15px 20px;
+}
+.gallery-btn {
+    display: inline-block;
+    background: #6a1b9a;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.gallery-btn:hover {
+    background: #4a116d;
+    transform: translateY(-2px);
+}
+
+@media(max-width:800px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* SMOOTH ANIMATIONS */
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: heroFade 1s ease both;
+}
+
+@keyframes heroFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-btn,
+.service-card,
+.project-card,
+.testimonial-card,
+.why-card,
+.job-card,
+.gallery-item,
+.contact-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* FLOATING WHATSAPP BUTTON */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 58px;
+    height: 58px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 28px;
+    box-shadow: 0 5px 18px rgba(0,0,0,.25);
+    z-index: 2000;
+    transition: .3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+}
+/* CONTACT BUTTONS */
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contact-buttons a {
+    margin-top: 0;
+}
+
+.contact-buttons .call-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.contact-buttons .call-btn:hover {
+    background: white;
+    color: #6a1b9a;
+}
+
+@media (max-width: 600px) {
+
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-buttons a {
+        width: 100%;
+        max-width: 280px;
+    }
+
+}
+/* PROFESSIONAL FOOTER */
+
+footer {
+    background: #4a116d;
+    color: white;
+    padding: 50px 30px 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr 1.3fr;
+    gap: 30px;
+}
+
+.footer-content h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 19px;
+}
+
+.footer-brand p,
+.footer-services p,
+.footer-contact p {
+    color: #eee;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.footer-links a {
+    display: block;
+    color: #eee;
+    text-decoration: none;
+    margin: 8px 0;
+    transition: .3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+    transform: translateX(4px);
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.2);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #ddd;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-links a:hover {
+        transform: none;
+    }
+
+}
+/* FOOTER SOCIAL MEDIA */
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social h4 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.social-buttons a {
+    display: inline-block;
+    color: white;
+    border: 1px solid rgba(255,255,255,.5);
+    padding: 7px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: .3s ease;
+}
+
+.social-buttons a:hover {
+    background: white;
+    color: #6a1b9a;
+}
+
+@media (max-width: 550px) {
+
+    .social-buttons {
+        justify-content: center;
+    }
+
+}
+/* BACK TO TOP BUTTON */
+
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #6a1b9a;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 18px rgba(0,0,0,.2);
+    z-index: 1999;
+    transition: .3s ease;
+}
+
+.back-to-top:hover {
+    transform: translateY(-4px);
+    background: #4a116d;
+}
 </style>
 </head>
 
 <body>
+    <a
+    href="https://wa.me/2348100892042"
+    class="floating-whatsapp"
+    target="_blank"
+    aria-label="Contact AMAS on WhatsApp">
+    💬
+</a>
+<button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">
+    ↑
+</button>
 
     <img class="logo"
      src="WhatsApp Image 2026-09-13 at 8.34.31 PM.jpeg"
@@ -444,242 +1457,554 @@ input[type="file"] {
     </div>
 </nav>
 
-    <section id="home">
-    <h1>AMAS CLEANING SERVICES</h1>
+    <section id="home" class="hero">
+    <div class="hero-content">
+        <p class="hero-tag">PROFESSIONAL CLEANING SERVICES IN ENUGU</p>
 
-    <p class="motto">Our Reputation Is Spotless</p>
+        <h1>AMAS CLEANING SERVICES</h1>
 
-    <p>
-        Professional cleaning services you can trust.
-        We provide reliable cleaning, fumigation,
-        washing and maintenance services in Enugu.
-    </p>
-    <p class="trust-text">
-        Trusted cleaning professionals serving homes,
-        businesses and organizations with quality service.
+        <h2>Our Reputation Is Spotless.</h2>
+
+        <p>
+            Professional cleaning solutions for homes, offices,
+            commercial spaces and more. With over 10 years of
+            experience, we deliver clean spaces you can trust.
         </p>
-    <div class="trust-stats">
-        <div>
-            <strong>10+</strong>
-            <span>Years Experience</span>
+
+        <div class="hero-buttons">
+            <a href="#contact" class="hero-btn primary-btn">Get a Free Quote</a>
+            <a href="#services" class="hero-btn secondary-btn">Explore Our Services</a>
         </div>
-        <div>
-            <strong>50+</strong>
-            <span>Cleaning Professionals</span>
-        </div>
-        <div>
-            <strong>Enugu</strong>
-            <span>Based & Serving</span>
+
+        <div class="hero-stats">
+            <div>
+                <strong>10+</strong>
+                <span>Years Experience</span>
+            </div>
+
+            <div>
+                <strong>50+</strong>
+                <span>Cleaning Professionals</span>
+            </div>
+
+            <div>
+                <strong>100+</strong>
+                <span>Projects Completed</span>
+            </div>
         </div>
     </div>
-
-    <a href="#contact">Book a Service</a>
-    <a href="https://wa.me/2348100892042">WhatsApp Us</a>
-    <a href="tel:+2348100892042">Call Now</a>
 </section>
      <section id="services">
     <h2>Our Services</h2>
 
-    <div>
-        <h3>AMAS Cleaning Services</h3>
-        <p>House cleaning, deep cleaning, commercial cleaning and post-construction cleaning.</p>
-    </div>
+    <div class="service-card">
+    <div class="service-icon">🧹</div>
+    <h3>AMAS Cleaning Services</h3>
+    <p>
+        Professional house cleaning, deep cleaning,
+        commercial cleaning and post-construction cleaning.
+    </p>
+    <a href="#contact">Book This Service</a>
+</div>
 
-    <div>
-        <h3>AMAS Fumigation Services</h3>
-        <p>Professional fumigation and pest control, including bedbug treatment.</p>
-    </div>
+<div class="service-card">
+    <div class="service-icon">🦟</div>
+    <h3>AMAS Fumigation Services</h3>
+    <p>
+        Professional fumigation and pest control,
+        including effective bedbug treatment.
+    </p>
+    <a href="#contact">Book This Service</a>
+</div>
 
-    <div>
-        <h3>AMAS Sofa & Rug Washing</h3>
-        <p>Professional sofa, upholstery and rug washing services.</p>
-    </div>
+<div class="service-card">
+    <div class="service-icon">🛋️</div>
+    <h3>AMAS Sofa & Rug Washing</h3>
+    <p>
+        Deep cleaning for sofas, upholstery, rugs
+        and other fabric surfaces.
+    </p>
+    <a href="#contact">Book This Service</a>
+</div>
 
-    <div>
-        <h3>AMAS Compounds & Pool Washing</h3>
-        <p>Compound, pool, brick and interlock washing services.</p>
-    </div>
+<div class="service-card">
+    <div class="service-icon">💦</div>
+    <h3>AMAS Compounds & Pool Washing</h3>
+    <p>
+        Professional compound, pool, brick and
+        interlock washing services.
+    </p>
+    <a href="#contact">Book This Service</a>
+</div>
 </section>
     <section id="projects">
     <h2>Our Cleaning Projects</h2>
 
-    <div>
-        <h3>House Cleaning Projects</h3>
-        <p>
-            We provide professional cleaning services for homes,
-            apartments and residential properties.
-        </p>
+    <div class="project-card">
+    <div class="project-number">01</div>
+    <h3>House Cleaning Projects</h3>
+    <p>
+        Professional cleaning for homes, apartments and
+        residential properties, leaving every space fresh,
+        comfortable and spotless.
+    </p>
+    <a href="#contact">Request Service</a>
+
+<div class="project-card">
+    <div class="project-number">02</div>
+    <h3>Commercial Cleaning Projects</h3>
+    <p>
+        Reliable cleaning solutions for offices, businesses
+        and commercial spaces, helping maintain a clean
+        professional environment.
+    </p>
+    <a href="#contact">Request Service</a>
+</div>
+
+<div class="project-card">
+    <div class="project-number">03</div>
+    <h3>Post-Construction Cleaning</h3>
+    <p>
+        Detailed removal of dust, dirt, debris and construction
+        residue to prepare newly completed properties for use.
+    </p>
+    <a href="#contact">Request Service</a>
+</div>
+</section>
+<section id="testimonials">
+    <h2>What Our Customers Say</h2>
+
+    <p class="testimonials-intro">
+        We are committed to providing reliable, professional
+        and quality cleaning services to every customer.
+    </p>
+
+    <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+                "AMAS did an excellent job cleaning our space.
+                The team was professional, thorough and reliable."
+            </p>
+            <h3>AMAS Customer</h3>
+            <span>Enugu</span>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+                "I was impressed with the quality of their work.
+                Everything was properly cleaned and organized."
+            </p>
+            <h3>AMAS Customer</h3>
+            <span>Enugu</span>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+                "Professional service from start to finish.
+                I would definitely use AMAS again."
+            </p>
+            <h3>AMAS Customer</h3>
+            <span>Enugu</span>
+        </div>
+
+    </div>
+</section>
+<section id="gallery">
+
+    <h2>Our Work Gallery</h2>
+
+    <p class="gallery-intro">
+        A look at some of the cleaning services and projects handled by AMAS Cleaning Services.
+    </p>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <div class="gallery-placeholder">🧹</div>
+            <h3>Professional Cleaning</h3>
+            <p>Residential cleaning projects</p>
+            <a href="https://wa.me/2348100892042?text=Hello%20AMAS%20Cleaning%20Services,%20I%20would%20like%20to%20book%20your%20Professional%20Cleaning%20service." class="gallery-btn" target="_blank">Book This Service</a>
+        </div>
+
+        <div class="gallery-item">
+            <div class="gallery-placeholder">🏢</div>
+            <h3>Commercial Cleaning</h3>
+            <p>Office and business spaces</p>
+            <a href="https://wa.me/2348100892042?text=Hello%20AMAS%20Cleaning%20Services,%20I%20would%20like%20to%20book%20your%20Professional%20Cleaning%20service." class="gallery-btn" target="_blank">Book This Service</a>
+        </div>
+
+        <div class="gallery-item">
+            <div class="gallery-placeholder">🛋️</div>
+            <h3>Sofa Washing</h3>
+            <p>Deep sofa and upholstery cleaning</p>
+            <a href="https://wa.me/2348100892042?text=Hello%20AMAS%20Cleaning%20Services,%20I%20would%20like%20to%20book%20your%20Professional%20Cleaning%20service." class="gallery-btn" target="_blank">Book This Service</a>
+        </div>
+
+        <div class="gallery-item">
+            <div class="gallery-placeholder">💦</div>
+            <h3>Compound Washing</h3>
+            <p>Outdoor surface cleaning</p>
+            <a href="https://wa.me/2348100892042?text=Hello%20AMAS%20Cleaning%20Services,%20I%20would%20like%20to%20book%20your%20Professional%20Cleaning%20service." class="gallery-btn" target="_blank">Book This Service</a>
+        </div>
+
+        <div class="gallery-item">
+            <div class="gallery-placeholder">✨</div>
+            <h3>Post-Construction Cleaning</h3>
+            <p>Detailed property cleanup</p>
+            <a href="https://wa.me/2348100892042?text=Hello%20AMAS%20Cleaning%20Services,%20I%20would%20like%20to%20book%20your%20Professional%20Cleaning%20service." class="gallery-btn" target="_blank">Book This Service</a>
+        </div>
+
+        <div class="gallery-item">
+            <div class="gallery-placeholder">🦟</div>
+            <h3>Fumigation Services</h3>
+            <p>Professional pest control</p>
+            <a href="https://wa.me/2348100892042?text=Hello%20AMAS%20Cleaning%20Services,%20I%20would%20like%20to%20book%20your%20Professional%20Cleaning%20service." class="gallery-btn" target="_blank">Book This Service</a>
+        </div>
+
     </div>
 
-    <div>
-        <h3>Commercial Cleaning Projects</h3>
-        <p>
-            We clean offices, businesses and other commercial
-            spaces to maintain a clean and professional environment.
-        </p>
-    </div>
-
-    <div>
-        <h3>Post-Construction Cleaning</h3>
-        <p>
-            We remove dust, dirt, debris and construction residue
-            to prepare newly completed properties for use.
-        </p>
-    </div>
 </section>
     <section id="why-us">
     <h2>Why Choose AMAS?</h2>
 
-    <div>
-        <h3>Nearly 10 Years of Experience</h3>
-        <p>
-            With nearly a decade of experience, AMAS Cleaning Services
-            has built practical expertise in delivering dependable
-            cleaning, washing, fumigation and maintenance solutions.
-        </p>
-    </div>
+    <div class="why-card">
+    <div class="why-icon">🏆</div>
+    <h3>10+ Years Experience</h3>
+    <p>
+        With over 10 years of experience, AMAS has developed
+        practical expertise in professional cleaning, washing,
+        fumigation and maintenance services.
+    </p>
+</div>
 
-    <div>
-        <h3>50+ Cleaning Professionals</h3>
-        <p>
-            Our team of over 50 workers gives us the capacity to handle
-            both individual cleaning jobs and larger residential,
-            commercial and specialized projects.
-        </p>
-    </div>
+<div class="why-card">
+    <div class="why-icon">👥</div>
+    <h3>50+ Professionals</h3>
+    <p>
+        Our team of over 50 cleaning professionals gives us
+        the capacity to handle residential, commercial and
+        specialized cleaning projects.
+    </p>
+</div>
 
-    <div>
-        <h3>Our Reputation Is Spotless</h3>
-        <p>
-            We are committed to professional service, attention to
-            detail and customer satisfaction on every project.
-        </p>
-    </div>
+<div class="why-card">
+    <div class="why-icon">✨</div>
+    <h3>Our Reputation Is Spotless</h3>
+    <p>
+        We are committed to professional service, attention
+        to detail and customer satisfaction on every project.
+    </p>
+</div>
 </section>
      <section id="about">
     <h2>About AMAS Cleaning Services</h2>
 
-    <p>
-        AMAS Cleaning Services is a professional cleaning and
-        maintenance company committed to delivering reliable,
-        quality and dependable services to homes, businesses
-        and organizations.
-    </p>
+<div class="about-content">
 
-    <p>
-        With nearly 10 years of experience, we have developed
-        the skills and practical expertise needed to handle
-        residential, commercial and specialized cleaning projects.
-    </p>
+    <div class="about-text">
+        <p>
+            AMAS Cleaning Services is a professional cleaning and
+            maintenance company dedicated to providing reliable,
+            quality and dependable services to homes, businesses
+            and organizations.
+        </p>
 
-    <p>
-        Our team of over 50 cleaning professionals gives us
-        the capacity to take on projects of different sizes
-        while maintaining our commitment to quality service.
-    </p>
+        <p>
+            With over 10 years of experience, we have developed
+            the practical expertise needed to handle residential,
+            commercial and specialized cleaning projects.
+        </p>
 
-    <h3>Our Motto</h3>
-    <p><strong>"Our Reputation Is Spotless"</strong></p>
+        <p>
+            Our team of over 50 cleaning professionals gives us
+            the capacity to take on projects of different sizes
+            while maintaining our commitment to quality service.
+        </p>
+    </div>
+
+    <div class="about-highlight">
+        <div>
+            <strong>10+</strong>
+            <span>Years Experience</span>
+        </div>
+
+        <div>
+            <strong>50+</strong>
+            <span>Professionals</span>
+        </div>
+
+        <div>
+            <strong>100+</strong>
+            <span>Projects</span>
+        </div>
+    </div>
+
+</div>
+
+<div class="about-motto">
+    <span>Our Motto</span>
+    <strong>"Our Reputation Is Spotless"</strong>
+</div>
 </section>
      <section id="jobs">
     <h2>Jobs & Career Opportunities</h2>
 
-    <p>
-        AMAS Cleaning Services provides employment opportunities
-        for hardworking and reliable individuals who want to build
-        a career in the cleaning and facility management industry.
-    </p>
+<p class="jobs-intro">
+    AMAS Cleaning Services provides employment opportunities
+    for hardworking and reliable individuals who want to build
+    a career in the cleaning and facility management industry.
+</p>
 
-    <h3>Available Opportunities</h3>
+<div class="job-opportunities">
 
-    <ul>
-        <li>House Cleaning Jobs</li>
-        <li>Commercial Cleaning Jobs</li>
-        <li>Cleaning Staff</li>
-        <li>Cleaning Supervisors</li>
-        <li>Fumigation & Pest Control Workers</li>
-    </ul>
+    <div class="job-card">
+        <div class="job-icon">🧹</div>
+        <h3>Cleaning Staff</h3>
+        <p>House and commercial cleaning opportunities.</p>
+    </div>
 
+    <div class="job-card">
+        <div class="job-icon">👨‍💼</div>
+        <h3>Cleaning Supervisors</h3>
+        <p>Supervise teams and maintain service standards.</p>
+    </div>
+
+    <div class="job-card">
+        <div class="job-icon">🦟</div>
+        <h3>Fumigation Workers</h3>
+        <p>Opportunities in fumigation and pest control.</p>
+    </div>
+
+</div>
+
+<div class="job-training">
     <h3>Staff Training</h3>
-    <p>
-        We also provide recruitment and training opportunities
-        for individuals interested in professional cleaning services.
-    </p>
 
-    <a href="#job-application">Apply for a Job</a>
+    <p>
+        We provide recruitment and training opportunities
+        for individuals interested in professional cleaning
+        and facility management services.
+    </p>
+</div>
+
+<a class="job-apply-btn" href="#job-application">
+    Apply for a Job
+</a>
 </section>
     <section id="contact">
-    <h2>Contact AMAS Cleaning Services</h2>
+    <h2>Get In Touch With AMAS</h2>
 
-    <p>
-        Ready to book a cleaning service or request a quotation?
-        Contact us today.
-    </p>
+<p class="contact-intro">
+    Ready to book a cleaning service or request a quotation?
+    Our team is ready to help.
+</p>
 
-    <p><strong>📍 Address:</strong> 105 Chime Avenue, New Haven, Enugu</p>
+<div class="contact-grid">
 
-    <p><strong>📞 Phone:</strong> 0810 089 2042</p>
+    <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <h3>Our Location</h3>
+        <p>105 Chime Avenue, New Haven, Enugu</p>
+    </div>
 
-    <p><strong>📱 WhatsApp:</strong> 0810 089 2042</p>
+    <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <h3>Call Us</h3>
+        <p>0810 089 2042</p>
+    </div>
 
-    <p><strong>📧 Email:</strong> Coming soon</p>
+    <div class="contact-card">
+        <div class="contact-icon">💬</div>
+        <h3>WhatsApp</h3>
+        <p>+234 810 089 2042</p>
+    </div>
 
+</div>
+
+<div class="contact-social">
     <h3>Follow AMAS</h3>
 
-    <p>
-        TikTok: @enugucleaningservices
-    </p>
+    <p>TikTok: @enugucleaningservices</p>
+    <p>Instagram: @amas__cleaning_services</p>
+    <p>Facebook: AMAS Cleaning Services</p>
+</div>
+
+<div class="contact-action">
+
+    <h3>Need Professional Cleaning?</h3>
 
     <p>
-        Instagram: @amas__cleaning_services
+        Contact AMAS Cleaning Services today for professional cleaning solutions.
     </p>
 
-    <p>
-        Facebook: AMAS Cleaning Services
-    </p>
+    <div class="contact-buttons">
 
-    <a href="https://wa.me/2348100892042">
-        Book a Service on WhatsApp
-    </a>
+        <a href="https://wa.me/2348100892042">
+            💬 Book on WhatsApp
+        </a>
+
+        <a href="tel:+2348100892042" class="call-btn">
+            📞 Call AMAS
+        </a>
+
+    </div>
+
+</div>
 </section>
    <section id="job-application">
-    <h2>Job Application</h2>
 
-    <p>
+    <h2>Join the AMAS Team</h2>
+
+    <p class="application-intro">
         Interested in working with AMAS Cleaning Services?
-        Fill out the form below and our team will contact you.
+        Complete the application form below and send your application directly to our team.
     </p>
 
-    <form onsubmit="sendApplication(event)">
-        <input type="text" placeholder="Full Name" required>
+    <div class="application-box">
 
-        <input type="tel" placeholder="Phone Number" required>
+        <div class="application-info">
+            <div class="application-icon">💼</div>
 
-        <input type="text" placeholder="Location" required>
+            <h3>Build Your Career With AMAS</h3>
 
-        <select required>
-            <option value="">Select Position</option>
-            <option>House Cleaning Staff</option>
-            <option>Commercial Cleaning Staff</option>
-            <option>Cleaning Supervisor</option>
-            <option>Fumigation & Pest Control Worker</option>
-        </select>
+            <p>
+                We are always looking for hardworking, reliable and responsible
+                individuals who are interested in professional cleaning and
+                facility management.
+            </p>
 
-        <textarea placeholder="Tell us about yourself and your experience" rows="5"></textarea>
-        <label for="cv">Upload CV(optional)</label>
-        <input type="file" id="cv"accept=".pdf,.doc,.docx">
-        <small class="cv-note">
-            If you upload a CV, please attach the same CV manually in WhatsApp after your application message opens.
-        </small>
+            <div class="application-points">
+                <p>✓ Professional work environment</p>
+                <p>✓ Training opportunities</p>
+                <p>✓ Career growth opportunities</p>
+                <p>✓ Opportunities for reliable workers</p>
+            </div>
+        </div>
 
-        <button type="submit">Submit Application</button>
-        <p id="application-message"></p>
-    </form>
+        <form onsubmit="sendApplication(event)">
+
+            <input type="text" placeholder="Full Name" required>
+
+            <input type="tel" placeholder="Phone Number" required>
+
+            <input type="text" placeholder="Location" required>
+
+            <select required>
+                <option value="">Select Position</option>
+                <option>Cleaning Staff</option>
+                <option>Cleaning Supervisor</option>
+                <option>Fumigation Worker</option>
+                <option>Other</option>
+            </select>
+
+            <textarea
+                placeholder="Tell us about your experience..."
+                rows="5"
+                required></textarea>
+
+            <label for="cv">Upload CV (Optional)</label>
+
+            <input
+                type="file"
+                id="cv"
+                accept=".pdf,.doc,.docx">
+
+            <small class="cv-note">
+                If you upload a CV, please attach the same CV manually in WhatsApp
+                after your application message opens.
+            </small>
+
+            <button type="submit">
+                Submit Application
+            </button>
+
+            <p id="application-message"></p>
+
+        </form>
+
+    </div>
+
 </section>
 <footer>
-    <h3>AMAS Cleaning Services</h3>
-    <p>Our Reputation Is Spotless</p>
-    <p>© 2026 AMAS Cleaning Services. All Rights Reserved.</p>
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h3>AMAS Cleaning Services</h3>
+            <p>Our Reputation Is Spotless.</p>
+            <p>
+                Professional cleaning solutions for homes,
+                offices and commercial spaces.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About Us</a>
+            <a href="#jobs">Jobs</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-services">
+            <h3>Our Services</h3>
+            <p>House Cleaning</p>
+            <p>Commercial Cleaning</p>
+            <p>Fumigation</p>
+            <p>Sofa & Rug Washing</p>
+            <p>Compound Washing</p>
+            <p>Post-Construction Cleaning</p>
+        </div>
+
+        <div class="footer-contact">
+
+    <h3>Contact Us</h3>
+
+    <p>📍 105 Chime Avenue, New Haven, Enugu</p>
+
+    <p>📞 0810 089 2042</p>
+
+    <p>💬 WhatsApp: +234 810 089 2042</p>
+
+    <div class="footer-social">
+
+        <h4>Follow AMAS</h4>
+
+        <div class="social-buttons">
+
+            <a href="https://www.tiktok.com/@enugucleaningservices"
+               target="_blank">
+                TikTok
+            </a>
+
+            <a href="https://www.instagram.com/amas__cleaning_services/"
+               target="_blank">
+                Instagram
+            </a>
+
+            <a href="https://www.facebook.com/Amascleaners"
+               target="_blank">
+                Facebook
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 AMAS Cleaning Services. All Rights Reserved.</p>
+    </div>
+
 </footer>
     <script>
 function sendApplication(event) {
