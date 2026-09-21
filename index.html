@@ -36,32 +36,57 @@
         padding: 30px 20px;
         text-align: center;
     }
-    nav {
+    /* MAIN NAVIGATION */
+.main-nav {
     background: #6a1b9a;
-    padding: 12px 15px;
+    padding: 12px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 65px;
 }
 
-nav a {
+/* AMAS NAME */
+.nav-brand {
     color: white;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* BOOK NOW BUTTON */
+.book-now {
+    background: white;
+    color: #6a1b9a;
     text-decoration: none;
-    margin: 0 15px;
+    padding: 9px 16px;
+    border-radius: 6px;
     font-weight: bold;
     transition: 0.3s ease;
 }
 
-nav a:hover {
-    color: #f1e6f7
+.book-now:hover {
+    background: #f1e6f7;
 }
+
+/* HAMBURGER */
 .menu-toggle {
-    display: none;
+    margin-left: auto;
+    display: block;
     background: transparent;
     border: none;
     color: white;
-    font-size: 28px;
+    font-size: 30px;
     cursor: pointer;
+}
+
+/* MENU LINKS */
+.nav-links {
+    display: none;
 }
 .motto {
     font-size: 22px;
@@ -220,24 +245,38 @@ nav a:hover {
     width: 100%;
     background: #6a1b9a;
     padding: 10px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
 }
 
 .nav-links a {
+    color: white;
+    text-decoration: none;
     width: 100%;
     text-align: center;
     padding: 14px;
     border-top: 1px solid rgba(255,255,255,.15);
+    font-weight: bold;
 }
 
-    nav {
-        padding: 10px 5px;
-    }
+    .main-nav {
+    padding: 10px 15px;
+    min-height: 58px;
+}
 
-    nav a {
-        display: inline-block;
-        margin: 5px 7px;
-        font-size: 14px;
-    }
+.nav-brand {
+    font-size: 16px;
+}
+
+.book-now {
+    padding: 7px 11px;
+    font-size: 13px;
+}
+
+.menu-toggle {
+    font-size: 28px;
+}
 
     section {
         margin: 25px 10px;
@@ -1451,17 +1490,23 @@ footer {
      src="WhatsApp Image 2026-09-13 at 8.34.31 PM.jpeg"
      alt="AMAS Cleaning Services Logo">
 
-    <nav>
-    <button class="menu-toggle">☰</button>
+    <nav class="main-nav">
+    <div class="nav-brand">AMAS Cleaning Services</div>
+    <a href="https://wa.me/2348100892042?text=Hello%20AMAS%20Cleaning%20Services%2C%20I%20would%20like%20to%20book%20your%20cleaning%20service." class="book-now" target="_blank">
+    Book Now
+</a>
 
-    <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About Us</a>
-        <a href="#jobs">Jobs</a>
-        <a href="#contact">Contact</a>
-    </div>
+<button class="menu-toggle" aria-label="Open menu">☰</button>
+
+<div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About Us</a>
+    <a href="#jobs">Jobs</a>
+    <a href="#contact">Contact</a>
+</div>
+
 </nav>
 
     <section id="home" class="hero">
@@ -2065,6 +2110,21 @@ link.addEventListener("click",function() {
     navLinks.style.display="none";
 });
 });
+</script>
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.style.display =
+            navLinks.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.style.display = 'none';
+        });
+    });
 </script>
 </body>
 </html>
